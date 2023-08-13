@@ -3,7 +3,7 @@ from django.utils.translation import gettext as _
 
 
 class Confirmed():
-    require_context = True
+    requires_context = True
 
     def __init__(self, other_field):
         self.other_field = other_field
