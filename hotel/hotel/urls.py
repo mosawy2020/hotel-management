@@ -18,13 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from users.viewsets import UserViewSet
+from managment.viewsets import HotelViewSet, RoomViewSet, RoomTypeViewSet, AccessoryViewSet
 
 router = routers.SimpleRouter()
 router.register(r'users', UserViewSet)
+router.register(r'hotels', HotelViewSet)
+router.register(r'rooms', RoomViewSet)
+router.register(r'room_types', RoomTypeViewSet)
+router.register(r'accessories', AccessoryViewSet)
 # router.register(r'accounts', AccountViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/', include((router.urls))),
-
 ]

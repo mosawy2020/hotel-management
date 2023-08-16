@@ -36,7 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-MY_APPS = ['users']
+MY_APPS = [
+    'users',
+    'managment',
+]
 DOWNLOADED_APPS = ['rest_framework']
 INSTALLED_APPS += MY_APPS + DOWNLOADED_APPS
 
@@ -107,7 +110,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
