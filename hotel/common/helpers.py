@@ -8,10 +8,10 @@ def validated(data=[], except_these=[]):
 from django.contrib.auth.hashers import check_password
 
 # The hashed password
-hashed_password = 'pbkdf2_sha256$600000$FY8loPkW1azqecivIhzbno$kmTW6XjsJtC3w6B/g6UHXshqLEAg9e+Mt7Ii6BUTmoc='
+hashed_password = ''
 
 # The password to check
-password = 'ypassword'
+password = ''
 
 # Check if the password matches the hashed password
 if check_password(password, hashed_password):
